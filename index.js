@@ -17,8 +17,8 @@ app.post('/api/fileanalyse', upload.single('upfile'), (req, res) =>{
   }
   let {originalname, mimetype, size} = req.file
   let resObj = {
-    originalname,
-    mimetype,
+    name: originalname,
+    type: mimetype,
     size
   }
     res.json(resObj)
